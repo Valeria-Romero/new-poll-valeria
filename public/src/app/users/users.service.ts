@@ -11,18 +11,18 @@ export class UsersService {
   }
 
   createUser( newUser: any ) {
-    return this._http.post( "http://localhost:8080/adduser", newUser )
+    return this._http.post( "http://localhost:8080/user/adduser", newUser )
       
 
 
   }
 
   loginUser( currentUser: any ){
-    return this._http.post( "http://localhost:8080/login", currentUser )
+    return this._http.post( "http://localhost:8080/user/login", currentUser )
   }
 
 
   logoutUser(): any {
-    return this._http.get( '/api/users/logout' );
+    return this._http.get( '/api/users/user/logout' );
   }
 }

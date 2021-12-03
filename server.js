@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "/public/dist/public" )));
 
 require('./server/config/database');
 
-app.use( '', UserRouter)
+app.use( '/user', UserRouter)
 app.use( '/poll', PollRouter )
 
 app.all( '*', function( request , response){
