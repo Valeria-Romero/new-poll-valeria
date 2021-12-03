@@ -1,0 +1,35 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 40px;
+    margin-right: 100px;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid black;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+tr{
+    border: 1px solid black;
+}
+
+thead{
+    font-weight: bold;
+}
+
+.search{
+    width: 300px;
+    margin-bottom: 20px;
+    align-self: flex-end;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
+}

@@ -1,0 +1,43 @@
+<a href="/dashboard">Go to polls</a>
+<h1 *ngFor = "let pollTitle of pollInfo">{{pollTitle.question}}</h1>
+<h3>Click the vote button to choose one</h3>
+
+<table>
+    <thead>
+        <tr>
+            <td>Option</td>
+            <td>Current Count of votes</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody *ngFor = "let poll of pollInfo">
+        <tr>
+            <td>{{poll.option1}}</td>
+            <td>{{poll.votesOption1}}</td>
+            <td>
+                <button (click) = "incrementVoteCount(1)">Vote</button>
+            </td>
+        </tr>
+        <tr>
+            <td>{{poll.option2}}</td>
+            <td>{{poll.votesOption2}}</td>
+            <td>
+                <button (click) = "incrementVoteCount(2)">Vote</button>
+            </td>
+        </tr>
+        <tr>
+            <td>{{poll.option3}}</td>
+            <td>{{poll.votesOption3}}</td>
+            <td>
+                <button (click) = "incrementVoteCount(3)">Vote</button>
+            </td>
+        </tr>
+        <tr>
+            <td>{{poll.option4}}</td>
+            <td>{{poll.votesOption4}}</td>
+            <td>
+                <button (click) = "incrementVoteCount(4)">Vote</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

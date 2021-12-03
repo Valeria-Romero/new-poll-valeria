@@ -1,0 +1,29 @@
+<div class="nav">
+    <a href="/create">Create a new poll</a> 
+    <a href="/" (click) = "logout()">Logout</a>
+</div>
+<div class="main"> 
+    
+    <h1>Current Polls</h1>
+    
+    <input type="text" name="search" placeholder="Search" class="search">
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Survey question</td>
+                <td>Date posted</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody *ngFor = "let poll of allPolls">
+            <tr>
+                <td>{{poll.pollCreator}}</td>
+                <td><a href="/poll/{{poll._id}}">{{poll.question}}</a></td>
+                <td>{{poll.created_at}}</td>
+                <td *ngIf = 'poll.pollCreator == sessionName'><a href="/dashboard" (click) = "deletePoll(poll._id)"> Delete </a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

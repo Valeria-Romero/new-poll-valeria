@@ -1,0 +1,21 @@
+<app-new-user-form></app-new-user-form>
+<h1>Login</h1>
+
+<form (submit) = "login( $event )">
+    <div>
+        <label for="username">
+            Username:
+        </label>
+        <input type="text" id="username" name="username" [(ngModel)] = "loginUsername">
+    </div>
+    <div>
+        <label for="password">
+            Password:
+        </label>
+        <input type="password" id="password" name="password" [(ngModel)] = "loginPassword">
+    </div>
+    <button type="submit">
+        Login
+    </button>
+</form>
+{{errorMessage}}

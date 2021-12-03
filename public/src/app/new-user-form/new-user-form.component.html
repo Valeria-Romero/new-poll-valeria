@@ -1,0 +1,39 @@
+<h1>Register</h1>
+
+<form (submit) = "createNewUser( $event )">
+    <div>
+        <label for="firstName">
+            First Name:
+        </label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)] = "newUser.firstName">
+        {{sizeError}}
+    </div>
+    <div>
+        <label for="email">
+            Username:
+        </label>
+        <input type="text" id="username" name="username" [(ngModel)] = "newUser.username">
+        {{usernameError}}
+        
+    </div>
+    <div>
+        <label for="password">
+            Password:
+        </label>
+        <input type="password" id="password" name="password" [(ngModel)] = "newUser.password">
+    </div>
+    <div>
+        <label for="password">
+            Confirm password:
+        </label>
+        <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)] = "newUser.confirmPassword">
+        {{passError}}
+    </div>
+    <button type="submit">
+        Submit
+    </button>
+</form>
+{{emptyError}}
+{{userCreated}}
+
+

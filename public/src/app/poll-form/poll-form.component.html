@@ -1,0 +1,27 @@
+<a href="/dashboard">Cancel</a>
+<h1>Put your question and options here</h1>
+<form (submit) = "NewPoll($event)">
+    <div>
+        <label for="question">Question</label>
+        <input type="text" name="question" [(ngModel)] = "poll.question">
+    </div>
+    <div>
+        <label for="option">Option 1</label>
+        <input type="text" name="option1" [(ngModel)] = "poll.option1">
+    </div>
+    <div>
+        <label for="option">Option 2</label>
+        <input type="text" name="option2" [(ngModel)] = "poll.option2">
+    </div>
+    <div>
+        <label for="option">Option 3</label>
+        <input type="text" name="option3" [(ngModel)] = "poll.option3">
+    </div>
+    <div>
+        <label for="option">Option 4</label>
+        <input type="text" name="option4" [(ngModel)] = "poll.option4">
+    </div>
+    
+    <button type="submit"> Create poll</button>
+</form>
+{{errorMessage}}
